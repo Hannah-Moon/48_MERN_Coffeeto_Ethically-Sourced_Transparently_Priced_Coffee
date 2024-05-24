@@ -4,7 +4,7 @@
 
 Coffeeto addresses the issue of opaque pricing in the coffee industry. Despite the growing awareness and scrutiny of prices like oil and cryptocurrencies, consumers often overlook the pricing transparency of everyday products like coffee. This project aims to shed light on coffee pricing by providing an API that offers transparent and real-time information about coffee prices, similar to how oil and cryptocurrency prices are tracked.
 
-# 🚩 Problem: Why does my cup of coffee cost so much?
+## 🚩 Problem: Why does my cup of coffee cost so much?
 
 The cost of coffee has significantly increased, with people now spending an average of $6 for a beverage at cafes and grocery store: bean prices climbing 22% in the last three years. This price surge is due to a combination of changing weather patterns, international turmoil, elevated energy costs, inflation, and labor shortages. Despite these rising costs, the complex process of producing and delivering high-quality coffee justifies the price, as each cup reflects the efforts of farmers, processors, and baristas. - By Rachel Lerman and Emily Wright, The Washington Post. Illustrations by Giulia Bernardelli -
 
@@ -25,10 +25,6 @@ I opted for transparency in coffee pricing as the guiding principle for my appro
 - **Fake Coffee API**: [https://fake-coffee-api.vercel.app/](https://fake-coffee-api.vercel.app/)
 - **Realtime Commodities API**: [https://commodities-api.com/](https://commodities-api.com/)
 
-## 🛠️ Process
+## 🛠️ Process: TBU
 
-<H1>TBU</H1>
-
-## Other details
-
-<H1>TBU. I will update as I make progress.</H1>
+## 📋 Other details: TBU
