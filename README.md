@@ -1,4 +1,6 @@
-# `MERN` Ethically Sourced, Transparently Priced Coffee for a Better World ☕
+# `MERN Stack` <br> : Ethically Sourced, Transparently Priced Coffee for a Better World ☕
+
+## 🎬 Live Demo
 
 ## 🧭 Overview
 
@@ -27,4 +29,10 @@ I opted for transparency in coffee pricing as the guiding principle for my appro
 
 ## 🛠️ Process: TBU
 
-## 📋 Other details: TBU
+## 💻 Other details: TBU
+
+## 📋 Full project documentation: TBU
+
+## 🇫 Figma Design File: TBU
+
+## 📊 Gantt Chart: TBU
