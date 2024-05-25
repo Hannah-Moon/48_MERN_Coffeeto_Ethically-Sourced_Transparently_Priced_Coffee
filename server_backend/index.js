@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { adminRoute } from "./routes/adminRoute.js";
+import { coffeeRoute } from "./routes/coffeeRoute.js";
+
 dotenv.config();
 
 const app = express();
@@ -17,3 +19,4 @@ app.listen(PORT, () => {
 });
 
 app.use("/api/admin", adminRoute);
+app.use("/api/coffee", coffeeRoute);

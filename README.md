@@ -29,10 +29,12 @@ I opted for transparency in coffee pricing as the guiding principle for my appro
 
 ## 🛠️ Process: TBU
 
-## 💻 Other details: TBU
-
-## 📋 Full project documentation: TBU
-
 ## 🇫 Figma Design File: TBU
 
 ## 📊 Gantt Chart: TBU
+
+## 💻 Entity Relationship Diagram(ERD)
+
+## 💡 Takeaway
+
+## 📋 Full project documentation: TBU

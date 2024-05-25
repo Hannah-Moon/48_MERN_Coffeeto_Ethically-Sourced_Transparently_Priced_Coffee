@@ -8,7 +8,7 @@ datasource db {
 }
 
 model Admin {
-    id String @id @default(auto()) @map("_id") @db.ObjectId //Generate ID automatically for user 
+    id String @id @default(auto()) @map("_id") @db.ObjectId //Generate ID automatically for admin
     name String? 
     email String @unique 
     image String? 
@@ -27,11 +27,10 @@ model Coffee {
     roast_level Float
     flavor_profile Json[]
     grind_option Json[]
+    image String
     adminEmail String
-    brewer Admin @relation("Brewer", fields: [adminEmail], references: [email])
+    owner Admin @relation("Brewer", fields: [adminEmail], references: [email])
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
-
     @@unique(fields: [name, adminEmail])
 }
-
