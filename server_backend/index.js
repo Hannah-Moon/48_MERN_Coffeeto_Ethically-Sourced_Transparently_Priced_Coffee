@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import { adminRoute } from "./routes/adminRoute.js";
 import { coffeeRoute } from "./routes/coffeeRoute.js";
+import { userRoute } from "./routes/userRoute.js";
 
 dotenv.config();
 
@@ -20,3 +21,4 @@ app.listen(PORT, () => {
 
 app.use("/api/admin", adminRoute);
 app.use("/api/coffee", coffeeRoute);
+app.use("/api/user", userRoute);

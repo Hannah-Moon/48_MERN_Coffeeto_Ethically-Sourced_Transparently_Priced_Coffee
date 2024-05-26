@@ -33,8 +33,8 @@ I opted for transparency in coffee pricing as the guiding principle for my appro
 
 ## 📊 Gantt Chart: TBU
 
-## 💻 Entity Relationship Diagram(ERD)
+## 💻 Entity Relationship Diagram(ERD): TBU
 
-## 💡 Takeaway
+## 💡 Takeaway: TBU
 
 ## 📋 Full project documentation: TBU
