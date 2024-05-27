@@ -1,7 +1,9 @@
+import React from "react";
 import "./PopularCoffees.css";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import data from "../../utils/slider.json";
+import { sliderSettings } from "../../utils/common";
 
 const PopularCoffees = () => {
   return (
@@ -12,10 +14,10 @@ const PopularCoffees = () => {
           <span className="primaryText">Popular Coffees</span>
         </div>
 
-        <Swiper>
+        <Swiper {...sliderSettings}>
           {data.map((card, i) => (
             <SwiperSlide key={i}>
-              <div className="popularCard">
+              <div className="flexColStart popular-card">
                 <div>
                   <img src={card.image_url} alt={card.name} />
                 </div>
