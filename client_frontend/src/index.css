@@ -88,7 +88,13 @@ a {
   color: var(--subgrey);
   font-size: 0.9rem;
 }
-.orangeText {
+
+.tertiaryText {
+  color: var(--lightgrey);
+  font-size: 0.9rem;
+}
+
+.eyebrowText {
   color: #f49b33;
   font-size: 1.5rem;
   font-weight: 600;
