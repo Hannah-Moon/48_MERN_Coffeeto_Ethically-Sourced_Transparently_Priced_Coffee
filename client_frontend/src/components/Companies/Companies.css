@@ -1,0 +1,9 @@
+.companyContainer {
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.companyContainer > img {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

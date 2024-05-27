@@ -22,6 +22,11 @@ I opted for transparency in coffee pricing as the guiding principle for my appro
 4. **Foster an Ethical Ecosystem**: Create an e-commerce platform offering ethically sourced coffee, facilitating direct connections between farmers and brewers to establish a sustainable and inclusive ecosystem.
 <!-- 5. **Provide Comparative Insights**: Present comparisons between coffee prices and other commodities, such as oil and cryptocurrencies, elucidating the varying levels of attention accorded to each. -->
 
+## 🚀 Technology
+
+- Frontend Client: Vite
+- Backend Server: Express, Prisma, MongoDB
+
 ## 🌐 APIs Used
 
 - **Fake Coffee API**: [https://fake-coffee-api.vercel.app/](https://fake-coffee-api.vercel.app/)
