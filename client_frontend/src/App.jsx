@@ -5,6 +5,7 @@ import PopularCoffees from "./components/PopularCoffees/PopularCoffees.jsx";
 import TransparentPricing from "./components/TransparentPricing/TransparentPricing.jsx";
 import MarketReport from "./components/MarketReport/MarketReport.jsx";
 import Subscription from "./components/Subscription/Subscription.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 import "./App.css";
 
@@ -21,6 +22,7 @@ function App() {
         <MarketReport />
         <PopularCoffees />
         <Subscription />
+        <Footer />
       </div>
     </div>
   );

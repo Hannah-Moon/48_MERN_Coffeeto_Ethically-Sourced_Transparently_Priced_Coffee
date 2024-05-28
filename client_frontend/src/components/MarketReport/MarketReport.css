@@ -23,8 +23,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Aligns children to the left */
-  width: 100%; /* Takes the full width of the parent container */
-  margin-bottom: 1rem; /* Adds space between the title and the chart */
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .market-title > h1 {
