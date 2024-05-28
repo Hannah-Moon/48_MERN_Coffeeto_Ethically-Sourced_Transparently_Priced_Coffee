@@ -1,0 +1,66 @@
+.favorite-wrapper {
+  /* border: 10px solid green; */
+  height: 30rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("/favorite_Banner.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+}
+
+.favorite-container {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: white;
+}
+
+/* left side */
+.favorite-left {
+  /* border: 2px solid red; */
+  gap: 3rem;
+  width: 50%;
+
+  background-color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-left: 2rem;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+  padding: 2rem;
+}
+.favorite-title {
+  position: relative;
+}
+.favorite-title > h1 {
+  font-weight: 600;
+  font-size: 3.8rem;
+  line-height: 4rem;
+  color: var(--primary);
+}
+.favorite-description {
+  color: var(--tertiary);
+  margin-top: 1rem;
+}
+
+/* mobile query */
+@media (max-width: 640px) {
+  .favorite-container {
+    margin-top: 2rem;
+  }
+  .favorite-title > h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
