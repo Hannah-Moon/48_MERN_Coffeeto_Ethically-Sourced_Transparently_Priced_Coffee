@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 
-.headerMenu {
+.header-menu {
   display: flex;
   gap: 2rem;
 }

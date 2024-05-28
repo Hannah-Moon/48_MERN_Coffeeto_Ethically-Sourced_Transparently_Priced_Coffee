@@ -1,16 +1,16 @@
-.popularWrapper {
+.popular-wrapper {
   display: flex;
   justify-content: center;
 }
 
-.popularContainer {
+.popular-container {
   gap: 2rem;
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
-.popularHead {
+.popular-head {
   margin-bottom: 2rem;
 }
 
@@ -116,4 +116,13 @@
       position: initial;
     }
   }
+}
+
+.button-container {
+  /* border: 2px solid green; */
+  border-radius: 5px;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

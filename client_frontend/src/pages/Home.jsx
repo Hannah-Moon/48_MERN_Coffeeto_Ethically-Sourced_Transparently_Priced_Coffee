@@ -10,18 +10,20 @@ import "./Home.css";
 
 function Home() {
   return (
-    <>
-      <div className="header-coffeeto">
-        <Header />
-        <Coffeeto />
+    <div className="Home">
+      <div>
+        <div className="grey-gradient">
+          <Header />
+          <Coffeeto />
+        </div>
+        <Companies />
+        <TransparentPricing />
+        <MarketReport />
+        <PopularCoffees />
+        <Subscription />
+        <Footer />
       </div>
-      <Companies />
-      <TransparentPricing />
-      <MarketReport />
-      <PopularCoffees />
-      <Subscription />
-      <Footer />
-    </>
+    </div>
   );
 }
 

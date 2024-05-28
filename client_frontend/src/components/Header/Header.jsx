@@ -37,7 +37,7 @@ const Header = () => {
           }}
         >
           <div
-            className="flexCenter headerMenu"
+            className="flexCenter header-menu"
             style={getMenuStyles(menuOpened)}
           >
             <a href="/shop">Shop</a>

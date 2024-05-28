@@ -6,9 +6,9 @@ import { sliderSettings } from "../../utils/common";
 
 const PopularCoffees = () => {
   return (
-    <section className="popularWrapper">
-      <div className="paddings innerWidth popularContainer">
-        <div className="flexColStart popularHead">
+    <section className="popular-wrapper">
+      <div className="paddings innerWidth popular-container">
+        <div className="flexColStart popular-head">
           <span className="eyebrowText">Best Sellers</span>
           <span className="primaryText">Popular Coffees</span>
         </div>
@@ -31,6 +31,10 @@ const PopularCoffees = () => {
                     <span>{card.weight}g</span>
                   </span>
                   <span className="description-text">{card.description}</span>
+                </div>
+                <div className="button-container">
+                  <button className="tertiaryButton">Favorite</button>
+                  <button className="button">Add to Cart</button>
                 </div>
               </div>
             </SwiperSlide>

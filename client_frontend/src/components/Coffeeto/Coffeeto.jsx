@@ -1,8 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "./Coffeeto.css";
-import CountUp from "react-countup";
-import { motion } from "framer-motion";
 
 const Coffeeto = () => {
+  const navigate = useNavigate();
   return (
     <section className="flexColStart coffeeto-wrapper">
       <div className="padding innerWidth coffeeto-container">
@@ -21,7 +21,15 @@ const Coffeeto = () => {
               </p>
             </div>
             <div className="flextCenter shopBttn">
-              <button className="button">Shop Now</button>
+              <button
+                className="button"
+                onClick={() => {
+                  console.log("Clicked");
+                  navigate("/shop");
+                }}
+              >
+                Shop Now
+              </button>
             </div>
           </div>
         </div>

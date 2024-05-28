@@ -1,6 +1,5 @@
 // Import Route and our components
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import Home from "./pages/Home.jsx";
 import Shop from "./pages/Shop.jsx";
 import Gift from "./pages/Gift.jsx";
@@ -8,6 +7,7 @@ import Tool from "./pages/Tool.jsx";
 import Discover from "./pages/Discover.jsx";
 import Favorite from "./pages/Favorite.jsx";
 import Cart from "./pages/Cart.jsx";
+import "./App.css";
 
 export default function App() {
   return (
@@ -15,8 +15,8 @@ export default function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} exact />
-          <Route path="/favorite" element={<Favorite />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/favorite" element={<Favorite />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/gift" element={<Gift />} />
           <Route path="/tool" element={<Tool />} />
