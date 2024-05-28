@@ -1,5 +1,6 @@
 import "./Coffeeto.css";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
 
 const Coffeeto = () => {
   return (
@@ -8,9 +9,13 @@ const Coffeeto = () => {
         {/* left side */}
         <div className="coffeeto-left">
           <div className="coffeeto-title">
-            <h1>
+            <motion.h1
+              initial={{ y: "15rem", opacity: 0 }}
+              animate={{ y: -15, opacity: 1 }}
+              tarnsition={{ duration: 10, type: "spring" }}
+            >
               Ethically Sourced, Transparently Priced Coffee for a Better World
-            </h1>
+            </motion.h1>
             <div className="coffeeto-description">
               <p>
                 Millions of coffee lovers choose our ethically sourced and

@@ -1,31 +1,29 @@
-import Header from "./components/Header/Header.jsx";
-import Coffeeto from "./components/Coffeeto/Coffeeto.jsx";
-import Companies from "./components/Companies/Companies.jsx";
-import PopularCoffees from "./components/PopularCoffees/PopularCoffees.jsx";
-import TransparentPricing from "./components/TransparentPricing/TransparentPricing.jsx";
-import MarketReport from "./components/MarketReport/MarketReport.jsx";
-import Subscription from "./components/Subscription/Subscription.jsx";
-import Footer from "./components/Footer/Footer.jsx";
-
+// Import Route and our components
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/Home.jsx";
+import Shop from "./pages/Shop.jsx";
+import Gift from "./pages/Gift.jsx";
+import Tool from "./pages/Tool.jsx";
+import Discover from "./pages/Discover.jsx";
+import Favorite from "./pages/Favorite.jsx";
+import Cart from "./pages/Cart.jsx";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <div>
-        <div className="grey-gradient">
-          <Header />
-          <Coffeeto />
-        </div>
-        <Companies />
-        <TransparentPricing />
-        <MarketReport />
-        <PopularCoffees />
-        <Subscription />
-        <Footer />
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/favorite" element={<Favorite />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/gift" element={<Gift />} />
+          <Route path="/tool" element={<Tool />} />
+          <Route path="/discover" element={<Discover />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
-
-export default App;
