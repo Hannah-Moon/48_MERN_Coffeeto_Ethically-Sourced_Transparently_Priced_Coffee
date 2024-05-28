@@ -1,52 +1,40 @@
-.coffeeto-wrapper {
+.construction-wrapper {
   /* border: 10px solid green; */
-  height: 45rem;
+  height: 42rem;
   color: white;
   position: relative;
+  z-index: 1;
   padding-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-image: url("/coffee_bean.avif");
+  background-image: url("/under_development.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
 }
 
-.coffeeto-container {
+.construction-container {
   /* border: 2px solid blue; */
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   position: relative;
   color: white;
 }
 
-/* left side */
-.coffeeto-left {
-  /* border: 2px solid red; */
-  gap: 3rem;
-  width: 70%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  margin-left: 2rem;
-  margin-top: 8rem;
-  margin-bottom: 5rem;
-}
-.coffeeto-title {
+.construction-title {
   position: relative;
 }
-.coffeeto-title > h1 {
+.construction-title > h1 {
   font-weight: 600;
   font-size: 3.8rem;
   line-height: 4rem;
 }
-.coffeeto-description {
-  color: var(--cardgrey);
-  margin-bottom: 3rem;
+.construction-description > p {
+  color: var(--subgrey);
+  margin-top: 1rem;
 }
 
 /* mobile query */
@@ -54,14 +42,23 @@
   .coffeetoContainer {
     margin-top: 2rem;
   }
-
   .coffeeto-title > h1 {
     font-size: 2.5rem;
     line-height: 3rem;
   }
-
   .imageConainer {
     width: 95%;
     height: 25rem;
+  }
+  .stats {
+    justify-content: center;
+    gap: 1.5rem;
+    font-weight: wrap;
+  }
+  .stat > :nth-child(1) {
+    font-size: 1.5rem;
+  }
+  .stat > :nth-child(2) {
+    font-size: 0.8rem;
   }
 }

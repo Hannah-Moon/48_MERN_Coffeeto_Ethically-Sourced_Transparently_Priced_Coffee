@@ -5,8 +5,11 @@ import { CiHeart } from "react-icons/ci";
 import { BsBasket3 } from "react-icons/bs";
 import { IoMenu } from "react-icons/io5";
 import OutsideClickHandler from "react-outside-click-handler";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const [menuOpened, setMenuOpened] = useState(false);
   const getMenuStyles = (menuOpened) => {
     if (document.documentElement.clientWidth <= 800) {
@@ -14,9 +17,19 @@ const Header = () => {
     }
   };
   return (
-    <section className="headerWrapper" style={{ background: "#ffffff" }}>
-      <div className="innerWidth paddings headerContainer">
-        <img src="/coffeetoLogo.png" alt="logo" width={100} />
+    <section className="header-wrapper" style={{ background: "#ffffff" }}>
+      <div className="innerWidth paddings header-container">
+        <img
+          src="/coffeetoLogo.png"
+          alt="logo"
+          className="CoffeetoLogo"
+          width={100}
+          onClick={() => {
+            console.log("Clicked");
+            // navigate("/HomePage");
+            navigate("/");
+          }}
+        />
 
         <OutsideClickHandler
           onOutsideClick={() => {
@@ -38,10 +51,24 @@ const Header = () => {
               </button>
             </div>
             <button className="tertiaryButton">
-              <CiHeart color="var(--orange)" size={22} />
+              <CiHeart
+                color="var(--orange)"
+                size={22}
+                onClick={() => {
+                  console.log("Clicked");
+                  navigate("/favorite");
+                }}
+              />
             </button>
             <button className="tertiaryButton">
-              <BsBasket3 color="var(--orange)" size={20} />
+              <BsBasket3
+                color="var(--orange)"
+                size={20}
+                onClick={() => {
+                  console.log("Clicked");
+                  navigate("/cart");
+                }}
+              />
             </button>
           </div>
         </OutsideClickHandler>

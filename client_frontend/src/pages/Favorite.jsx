@@ -8,6 +8,7 @@ const Favorite = () => {
     <>
       <Header />
       <FavoriteBanner />
+
       <Footer />
     </>
   );

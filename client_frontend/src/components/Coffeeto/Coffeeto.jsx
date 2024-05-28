@@ -4,18 +4,14 @@ import { motion } from "framer-motion";
 
 const Coffeeto = () => {
   return (
-    <section className="flexColStart coffeetoWrapper">
-      <div className="padding innerWidth coffeetoContainer">
+    <section className="flexColStart coffeeto-wrapper">
+      <div className="padding innerWidth coffeeto-container">
         {/* left side */}
         <div className="coffeeto-left">
           <div className="coffeeto-title">
-            <motion.h1
-              initial={{ y: "15rem", opacity: 0 }}
-              animate={{ y: -15, opacity: 1 }}
-              tarnsition={{ duration: 10, type: "spring" }}
-            >
+            <h1>
               Ethically Sourced, Transparently Priced Coffee for a Better World
-            </motion.h1>
+            </h1>
             <div className="coffeeto-description">
               <p>
                 Millions of coffee lovers choose our ethically sourced and
@@ -26,32 +22,6 @@ const Coffeeto = () => {
             </div>
             <div className="flextCenter shopBttn">
               <button className="button">Shop Now</button>
-            </div>
-
-            <div className="flexStart stats">
-              <div className="flexColCenter stat">
-                <span>
-                  <CountUp start={1} end={100} duration={3} />
-                  <span>+</span>
-                </span>
-                <span className="secondaryText">Registered coffee</span>
-              </div>
-
-              <div className="flexColCenter stat">
-                <span>
-                  <CountUp start={1} end={20} duration={3} />
-                  <span>+</span>
-                </span>
-                <span className="secondaryText">Global Brewers</span>
-              </div>
-
-              <div className="flexColCenter stat">
-                <span>
-                  <CountUp start={1} end={5} duration={3} />
-                  <span>+</span>
-                </span>
-                <span className="secondaryText">Corporate Parts</span>
-              </div>
             </div>
           </div>
         </div>
