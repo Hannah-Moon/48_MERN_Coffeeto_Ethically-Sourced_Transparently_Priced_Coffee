@@ -1,7 +1,7 @@
-.coffeetoWrapper {
+.priceWrapper {
   /* border: 10px solid green; */
-  height: 45rem;
-  color: white;
+  height: 50rem;
+  color: var(--darkgrey);
   position: relative;
   z-index: 1;
   padding-bottom: 2rem;
@@ -9,84 +9,58 @@
   justify-content: center;
   align-items: center;
 
-  background-image: url("/coffee_bean.avif");
+  background-image: url("/Transparent_Pricing.png");
   background-repeat: no-repeat;
   background-size: cover; /* Ensures the image covers the entire container */
   background-position: center; /* Centers the image */
 }
 
-.coffeetoContainer {
+.priceContainer {
   /* border: 2px solid blue; */
   display: flex;
   justify-content: space-between;
   position: relative;
-  color: white;
+  color: var(--darkgrey);
 }
 
 /* left side */
-.coffeeto-left {
+.price-left {
   /* border: 2px solid red; */
   gap: 3rem;
-  width: 70%;
+  width: 45%;
 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
   margin-left: 2rem;
-  margin-top: 8rem;
+  margin-top: 5rem;
   margin-bottom: 5rem;
 }
-.coffeeto-title {
+.price-title {
   position: relative;
 }
-.coffeeto-title > h1 {
+.price-title > h1 {
   font-weight: 600;
   font-size: 3.8rem;
   line-height: 4rem;
 }
-.coffeeto-description {
-  color: var(--subgrey);
+.price-description {
+  color: var(--mediumgrey);
   margin-bottom: 3rem;
 }
-.stats {
-  width: 100%;
-  justify-content: space-around;
-  margin-top: 2rem;
-}
-.stat {
-  margin-right: 1.5rem;
-}
-.stat > :nth-child(1) {
-  font-size: 2rem;
-}
-.stat > :nth-child(1) > :last-child {
-  color: orange;
-}
-/* right side */
 
 /* mobile screens */
 @media (max-width: 640px) {
-  .coffeetoContainer {
+  .priceContainer {
     margin-top: 2rem;
   }
-  .coffeeto-title > h1 {
+  .price-title > h1 {
     font-size: 2.5rem;
     line-height: 3rem;
   }
   .imageConainer {
     width: 95%;
     height: 25rem;
-  }
-  .stats {
-    justify-content: center;
-    gap: 1.5rem;
-    font-weight: wrap;
-  }
-  .stat > :nth-child(1) {
-    font-size: 1.5rem;
-  }
-  .stat > :nth-child(2) {
-    font-size: 0.8rem;
   }
 }
