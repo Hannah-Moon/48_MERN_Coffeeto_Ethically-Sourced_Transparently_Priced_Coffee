@@ -22,7 +22,7 @@
   cursor: pointer;
 }
 
-.menu-icon {
+.hamberger-icon {
   display: none;
 }
 
@@ -44,7 +44,11 @@
 }
 
 @media (max-width: 768px) {
-  .menu-icon {
+  .search-bar {
+    display: none;
+  }
+
+  .hamberger-icon {
     display: block;
   }
 
@@ -55,10 +59,10 @@
     font-weight: 500;
     flex-direction: column;
     right: 1rem;
-    top: 4rem;
+    top: 7rem;
     background: white;
     border-radius: 10px;
-    transition: all 200ms ease;
+    transition: all 500ms ease;
     align-items: flex-start;
     padding: 1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
