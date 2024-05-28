@@ -1,6 +1,7 @@
 import { useEffect, useRef, memo } from "react";
 import "./MarketReport.css";
 
+// eslint-disable-next-line react-refresh/only-export-components
 function MarketReport() {
   const containerRef = useRef(null);
 
@@ -71,4 +72,5 @@ function MarketReport() {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default memo(MarketReport);

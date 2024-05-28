@@ -20,16 +20,18 @@
 }
 
 .market-title {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  align-items: flex-start; /* Aligns children to the left */
+  width: 100%; /* Takes the full width of the parent container */
+  margin-bottom: 1rem; /* Adds space between the title and the chart */
 }
+
 .market-title > h1 {
   /* font-weight: 600;
   font-size: 2.5rem;
   line-height: 4rem; */
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .price-description {
   color: var(--mediumgrey);
