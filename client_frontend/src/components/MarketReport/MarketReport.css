@@ -1,0 +1,52 @@
+.marketreport-container {
+  /* border: 10px solid green; */
+  height: 50rem;
+  color: var(--darkgrey);
+  position: relative;
+  z-index: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tradingview-widget-container__widget {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: var(--darkgrey);
+}
+
+.market-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.market-title > h1 {
+  /* font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 4rem; */
+  margin-bottom: 1.5rem;
+}
+.price-description {
+  color: var(--mediumgrey);
+  margin-bottom: 3rem;
+}
+
+/* mobile screens */
+@media (max-width: 640px) {
+  .tradingview-widget-container {
+    margin-top: 2rem;
+  }
+  .price-title > h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .imageConainer {
+    width: 95%;
+    height: 25rem;
+  }
+}
