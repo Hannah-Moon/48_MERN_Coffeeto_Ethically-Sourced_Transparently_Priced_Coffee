@@ -12,7 +12,7 @@ function Home() {
   return (
     <div className="Home">
       <div>
-        <div className="grey-gradient">
+        <div className="">
           <Header />
           <Coffeeto />
         </div>

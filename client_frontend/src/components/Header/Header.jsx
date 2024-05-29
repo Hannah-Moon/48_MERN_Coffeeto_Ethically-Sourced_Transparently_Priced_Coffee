@@ -67,7 +67,7 @@ const Header = () => {
                 size={22}
                 onClick={() => {
                   console.log(
-                    "Favorite button is selected.taking users to the favorite screen."
+                    "Favorite button is selected. Taking users to the favorite screen."
                   );
                   navigate("/favorite");
                 }}

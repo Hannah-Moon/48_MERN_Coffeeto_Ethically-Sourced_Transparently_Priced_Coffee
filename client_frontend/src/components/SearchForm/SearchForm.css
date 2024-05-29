@@ -1,0 +1,30 @@
+.search {
+  height: 3rem;
+  width: 20rem;
+  /* border: 2px solid #0e0e41; */
+  padding: 0.2rem;
+  padding-left: 1rem;
+  /* margin-top: 0.5rem;
+    margin-bottom: 2rem; */
+  border-radius: 20px 0px 0px 20px;
+  font-size: 1.2rem;
+  color: grey;
+}
+
+.submitBtn {
+  height: 3rem;
+  width: 5rem;
+
+  color: #fff;
+  background-color: rgb(190, 24, 93);
+  /* border-color: 2px solid #242424; */
+
+  padding: 0.2rem;
+  padding-right: 0.5rem;
+
+  /* margin-top: 0.5rem;
+    margin-bottom: 2rem; */
+  border-radius: 0px 20px 20px 0px;
+
+  font-size: 1.2rem;
+}

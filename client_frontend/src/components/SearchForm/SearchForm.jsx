@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./SearchForm.css";
 
 export default function Form(props) {
   // State to hold the data of our form

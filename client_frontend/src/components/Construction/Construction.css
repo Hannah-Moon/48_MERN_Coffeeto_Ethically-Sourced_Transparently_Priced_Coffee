@@ -41,6 +41,9 @@
 @media (max-width: 640px) {
   .coffeetoContainer {
     margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .coffeeto-title > h1 {
     font-size: 2.5rem;
