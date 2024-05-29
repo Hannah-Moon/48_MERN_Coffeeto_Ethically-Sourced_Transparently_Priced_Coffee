@@ -1,0 +1,83 @@
+.productView-wrapper {
+  /* border: 10px solid green; */
+  height: 45rem;
+  color: white;
+  position: relative;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("/coffee_bean.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.productView-container {
+  border: 2px solid blue;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: white;
+}
+
+/* left side */
+.productView-left {
+  border: 2px solid white;
+  gap: 1rem;
+  width: 50%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* right side */
+.productView-right {
+  border: 2px solid pink;
+  gap: 1rem;
+  width: 50%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 21rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.productView-title {
+  border: 5px solid blue;
+  position: relative;
+}
+.productView-title > h1 {
+  font-weight: 600;
+  font-size: 3.8rem;
+  line-height: 4rem;
+}
+.productView-description {
+  color: var(--cardgrey);
+  margin-bottom: 3rem;
+}
+
+/* mobile query */
+@media (max-width: 640px) {
+  .productView-container {
+    margin-top: 2rem;
+  }
+
+  .productView-title > h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .imageConainer {
+    width: 95%;
+    height: 25rem;
+  }
+}

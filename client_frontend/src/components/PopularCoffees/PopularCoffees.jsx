@@ -1,8 +1,9 @@
 import "./PopularCoffees.css";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import data from "../../utils/slider.json";
-import { sliderSettings } from "../../utils/common";
+import data from "../../data/slider.json";
+import { sliderSettings } from "./swiperLogic.js";
+import CoffeeCard from "../CoffeeCard/CoffeeCard.jsx";
 
 const PopularCoffees = () => {
   return (
@@ -14,29 +15,9 @@ const PopularCoffees = () => {
         </div>
 
         <Swiper {...sliderSettings}>
-          <SliderButtons />
           {data.map((card, i) => (
             <SwiperSlide key={i}>
-              <div className="flexColStart popular-card">
-                <div>
-                  <img src={card.image_url} alt={card.name} />
-                </div>
-                <div className="card-text">
-                  <span className="coffee-name">{card.name}</span>
-
-                  <span className="price-text">
-                    <span style={{ color: "#F49B33" }}>$</span>
-                    <span>{card.price}</span>
-                    <span style={{ color: "lt.grey" }}> | </span>
-                    <span>{card.weight}g</span>
-                  </span>
-                  <span className="description-text">{card.description}</span>
-                </div>
-                <div className="button-container">
-                  <button className="tertiaryButton">Favorite</button>
-                  <button className="button">Add to Cart</button>
-                </div>
-              </div>
+              <CoffeeCard card={card} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -46,17 +27,3 @@ const PopularCoffees = () => {
 };
 
 export default PopularCoffees;
-
-const SliderButtons = () => {
-  const swiper = useSwiper();
-  return (
-    <div className="flexCenter popular-btns">
-      <button onClick={() => swiper.slidePrev()} className="r-prevButton">
-        &lt;
-      </button>
-      <button onClick={() => swiper.slideNext()} className="r-nextButton">
-        &gt;
-      </button>
-    </div>
-  );
-};

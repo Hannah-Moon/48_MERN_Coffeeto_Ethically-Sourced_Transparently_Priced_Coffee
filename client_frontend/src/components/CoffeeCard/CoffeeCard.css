@@ -1,21 +1,4 @@
-.products-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.products-container {
-  gap: 2rem;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.products-head {
-  margin-bottom: 2rem;
-}
-
-.popular-card {
-  /* border: 2px solid red; */
+.coffee-card {
   gap: 0.6rem;
   padding: 1rem;
   border-radius: 10px;
@@ -26,26 +9,22 @@
   background-color: var(--cardgrey);
 
   width: 100%;
-  max-width: 25rem;
+  max-width: 30rem;
 }
 
-.popular-card:hover {
+.coffee-card:hover {
   scale: 1.025;
   border-radius: 10px;
   cursor: pointer;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(91, 91, 91, 0.46) 118%
+    rgba(91, 91, 91, 0.46) 218%
   );
-  box-shadow: 0px 36px 24px -51px rgba(55, 55, 55, 0.21);
+  box-shadow: 0px 72px 49px -51px rgba(55, 55, 55, 0.21);
 }
 
-.swiper-horizontal {
-  overflow: visible;
-}
-
-.popular-card > div > img {
+.coffee-card > div > img {
   width: 100%;
   height: 15rem;
   max-height: 25rem;
@@ -66,7 +45,7 @@
 }
 
 .coffee-name {
-  height: 5rem;
+  height: 3rem;
   font-size: 1.7rem;
   font-weight: 600;
 }
@@ -81,45 +60,11 @@
   color: var(--lightgrey);
 }
 
-.swiper-horizontal {
-  overflow: visible;
-}
-
 .popular-btns {
   position: absolute;
   gap: 1rem;
   top: -4rem;
   right: 0;
-}
-
-.popular-btns button {
-  font-size: 1.2rem;
-  padding: 0.2rem 0.8rem;
-  color: var(--primary);
-  border: none;
-  border-radius: 5px;
-  background-color: white;
-  cursor: pointer;
-}
-
-.popular-btns > :nth-child(1) {
-  background-color: #fff3e5;
-}
-
-.popular-btns > :nth-child(2) {
-  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-.load-more-button {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: center;
 }
 
 .button-container {

@@ -29,7 +29,6 @@
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -43,11 +42,11 @@ a {
 
 .flexCenter {
   display: flex;
-  row-gap: 2rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
+
 .flexStart {
   display: flex;
   justify-content: flex-start;
@@ -72,6 +71,7 @@ a {
   justify-content: center;
   align-items: flex-start;
 }
+
 .flexColEnd {
   display: flex;
   flex-direction: column;
@@ -80,7 +80,7 @@ a {
 }
 
 .primaryText {
-  color: #2b2b2b;
+  color: #352208;
   font-weight: bold;
   font-size: 2rem;
 }

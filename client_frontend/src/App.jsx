@@ -7,6 +7,7 @@ import Tool from "./pages/Tool.jsx";
 import Discover from "./pages/Discover.jsx";
 import Favorite from "./pages/Favorite.jsx";
 import Cart from "./pages/Cart.jsx";
+import ASingleProduct from "./pages/ASingleProduct.jsx";
 import "./App.css";
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/tool" element={<Tool />} />
           <Route path="/discover" element={<Discover />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/shop/product" element={<ASingleProduct />} />
         </Routes>
       </div>
     </BrowserRouter>
