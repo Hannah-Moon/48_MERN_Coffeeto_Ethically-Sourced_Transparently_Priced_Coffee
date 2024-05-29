@@ -8,21 +8,21 @@
   <img width="600" src="https://via.placeholder.com/600x400.png?text=Live+Demo+Placeholder" alt="Coffeeto.gif" />
 </div>
 
-| Sceen capture                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------- |
-| <img width="750" src="https://via.placeholder.com/600x400.png?text=Live+Demo+Placeholder" alt="Coffeeto.gif"> |
+| Screen capture                                           |
+| -------------------------------------------------------- |
+| <img width="750" alt='Gantt' src="/assets/coffeeto.gif"> |
 
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
-- [Problem](#-problem-why-does-my-cup-of-coffee-cost-so-much)
+- [Problem](#-problem)
 - [Solution](#-solution)
 - [Features](#-features)
 - [Technology](#-technology)
 - [APIs](#-apis)
 - [Figma Design File](#-figma-design-file)
 - [Gantt Chart](#-gantt-chart)
-- [Takeaway](#-takeaway-tbu)
+- [Takeaway](#-takeaway)
 - [Reflection](#-reflection)
 - [What's next?](#-whats-next)
 
