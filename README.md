@@ -8,6 +8,10 @@
   <img width="600" src="https://via.placeholder.com/600x400.png?text=Live+Demo+Placeholder" alt="Coffeeto.gif" />
 </div>
 
+| Sceen capture                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------- |
+| <img width="750" src="https://via.placeholder.com/600x400.png?text=Live+Demo+Placeholder" alt="Coffeeto.gif"> |
+
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
@@ -55,12 +59,13 @@ I opted for transparency in coffee pricing as the guiding principle for my appro
 
 | [Click here to review the entire customer flow for the Figma Proto presentation.](https://www.figma.com/proto/IjceSS9JCBiT4Cjb99g9oh/Per-Scholar-Mock-Up?page-id=326%3A2485&node-id=345-30575&viewport=-2875%2C2730%2C0.13&t=VLU7e92xOOL8e8Da-1&scaling=min-zoom&starting-point-node-id=345%3A30575) |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img width="600" alt='Coffeeto_figma.gif' src="/assets/Coffeeto_figma.gif">                                                                                                                                                                                                                          |
+| <img width="750" alt='Coffeeto_figma.gif' src="/assets/Coffeeto_figma.gif">                                                                                                                                                                                                                          |
 
 ## 📊 Gantt Chart
 
-| ---------------------------------------------------------------------------------------------------------- |
-| <img width="600" alt='Gantt' src="/assets/Gantt.png"> |
+| Snapshot                                              |
+| ----------------------------------------------------- |
+| <img width="750" alt='Gantt' src="/assets/Gantt.png"> |
 
 ## 🔎 Reflection
 
