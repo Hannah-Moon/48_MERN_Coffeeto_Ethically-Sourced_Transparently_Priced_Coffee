@@ -1,20 +1,22 @@
 import "./FavoriteCoffeeCard.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { useContext } from "react";
 import { CoffeeContext } from "../../context-and-reducer/CoffeeContext.jsx";
 
 const FavoriteCoffeeCard = ({ favoriteCard }) => {
-  const navigate = useNavigate();
   const { removeFromFavorite } = useContext(CoffeeContext);
+
   const handleRemove = () => {
     removeFromFavorite(favoriteCard);
   };
 
+  // const navigate = useNavigate();
+
   return (
     <div
       className="flexColStart coffee-card"
-      onClick={() => navigate(`../shop/${favoriteCard.id}`)}
+      // onClick={() => navigate(`../shop/${favoriteCard.id}`)}
     >
       <div>
         <img src={favoriteCard.image_url} alt={favoriteCard.name} />
