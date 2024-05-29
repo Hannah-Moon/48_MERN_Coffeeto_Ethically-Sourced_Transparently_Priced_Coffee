@@ -1,6 +1,5 @@
 export const initialState = {
-  total: 0,
-  coffee: [],
+  coffees: [],
 };
 
 const coffeeReducer = (state, action) => {
