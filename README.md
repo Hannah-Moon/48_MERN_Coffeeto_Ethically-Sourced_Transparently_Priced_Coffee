@@ -1,13 +1,12 @@
-# `MERN Stack`
+# `Coffeeto`
 
-: Ethically Sourced, Transparently Priced Coffee for a Better World ☕
-
-> Objective  
-> Create a full-stack web application using MongoDB, Express, React, and Node (MERN).
+> : a Full Stack MERN Application With CRUD Ethically Sourced, Transparently Priced Coffee for a Better World ☕
 
 ## 🎬 Live Demo
 
-<img alt='Coffeeto.gif' src="/assets/coffeeto.gif">
+<div style="border: 1px solid grey; padding: 5px;">
+  <img width="600" src="https://via.placeholder.com/600x400.png?text=Live+Demo+Placeholder" alt="Coffeeto.gif" />
+</div>
 
 ## 📋 Table of Contents
 
@@ -17,10 +16,8 @@
 - [Features](#-features)
 - [Technology](#-technology)
 - [APIs](#-apis)
-- [Process](#-process-tbu)
 - [Figma Design File](#-figma-design-file)
 - [Gantt Chart](#-gantt-chart)
-- [Entity Relationship Diagram(ERD)](#-entity-relationship-diagram-erd-tbu)
 - [Takeaway](#-takeaway-tbu)
 - [Reflection](#-reflection)
 - [What's next?](#-whats-next)
@@ -56,22 +53,23 @@ I opted for transparency in coffee pricing as the guiding principle for my appro
 
 ## 🇫 Figma Design File
 
-<img alt='Coffeeto_figma.gif' src="/assets/Coffeeto_figma.gif">
-
-- [Click here to review the entire customer flow for the Figma Proto presentation.](https://www.figma.com/proto/IjceSS9JCBiT4Cjb99g9oh/Per-Scholar-Mock-Up?page-id=326%3A2485&node-id=345-30575&viewport=-2875%2C2730%2C0.13&t=VLU7e92xOOL8e8Da-1&scaling=min-zoom&starting-point-node-id=345%3A30575)
+| [Click here to review the entire customer flow for the Figma Proto presentation.](https://www.figma.com/proto/IjceSS9JCBiT4Cjb99g9oh/Per-Scholar-Mock-Up?page-id=326%3A2485&node-id=345-30575&viewport=-2875%2C2730%2C0.13&t=VLU7e92xOOL8e8Da-1&scaling=min-zoom&starting-point-node-id=345%3A30575) |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img width="600" alt='Coffeeto_figma.gif' src="/assets/Coffeeto_figma.gif">                                                                                                                                                                                                                          |
 
 ## 📊 Gantt Chart
 
-<img alt='Gantt' src="/assets/Gantt.png">
+| ---------------------------------------------------------------------------------------------------------- |
+| <img width="600" alt='Gantt' src="/assets/Gantt.png"> |
 
 ## 🔎 Reflection
 
-| Key Takeaway        | Reflection                                                                                                                                                                                                                                                                 |
+| Key Takeaway        | Analysis                                                                                                                                                                                                                                                                   |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Data Structure      | Began by developing the backend schema first, prioritizing a robust understanding of data structures. Recognizing the potential need for significant design adjustments, ensured a solid foundation by creating a comprehensive data structure within the MongoDB library. |
 | Perfectionism       | Acknowledged spending excessive time pursuing perfection.                                                                                                                                                                                                                  |
 | Reusable Components | Recognized the importance of modularization and code reusability by splitting components, such as cards, for better maintainability and scalability.                                                                                                                       |
-| Commitment          | Achieved a milestone of 100 commits for this project, signifying consistent progress and dedication.                                                                                                                                                                       |
+| Commitment          | Achieved a milestone of over 30 commits for this project, signifying consistent progress and dedication.                                                                                                                                                                   |
 | Project Management  | Emphasized the importance of focusing on completing the Minimum Viable Product (MVP), reminding myself to iterate, ask questions, seek help, and incrementally chip away at tasks.                                                                                         |
 | Support Network     | Forming a small support group proved invaluable, providing motivation and accountability during challenging periods, such as long weekends.                                                                                                                                |
 | Code Quality        | Addressed code quality issues by removing red curly lines from the ESLint configuration file, ensuring clean and consistent code. Also emphasized the importance of regularly checking React components in the console.                                                    |
