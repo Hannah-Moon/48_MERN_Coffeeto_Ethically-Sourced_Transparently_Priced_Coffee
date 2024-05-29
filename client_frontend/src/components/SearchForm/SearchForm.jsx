@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./SearchForm.css";
 
-export default function Form(props) {
+export default function SearchForm(props) {
   // State to hold the data of our form
   const [formData, setFormData] = useState({
     searchterm: "",
