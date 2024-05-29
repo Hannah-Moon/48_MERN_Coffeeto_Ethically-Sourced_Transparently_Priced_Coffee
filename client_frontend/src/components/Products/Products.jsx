@@ -1,6 +1,7 @@
 import "swiper/css";
 import data from "../../data/slider.json";
 import "./Products.css";
+import CoffeeCard from "../CoffeeCard/CoffeeCard";
 
 const PopularCoffees = () => {
   return (
@@ -21,25 +22,8 @@ const PopularCoffees = () => {
                 card,
                 i // Adjusted to show 4x4 grid
               ) => (
-                <div key={i} className="popular-card">
-                  <div>
-                    <img src={card.image_url} alt={card.name} />
-                  </div>
-                  <div className="card-text">
-                    <span className="coffee-name">{card.name}</span>
-
-                    <span className="price-text">
-                      <span style={{ color: "#F49B33" }}>$</span>
-                      <span>{card.price}</span>
-                      <span style={{ color: "lt.grey" }}> | </span>
-                      <span>{card.weight}g</span>
-                    </span>
-                    <span className="description-text">{card.description}</span>
-                  </div>
-                  <div className="button-container">
-                    <button className="tertiaryButton">Favorite</button>
-                    <button className="button">Add to Cart</button>
-                  </div>
+                <div key={i} className="just-in-card">
+                  <CoffeeCard card={card} />
                 </div>
               )
             )}
@@ -61,25 +45,8 @@ const PopularCoffees = () => {
                 card,
                 i // Adjusted to show 4x4 grid
               ) => (
-                <div key={i} className="popular-card">
-                  <div>
-                    <img src={card.image_url} alt={card.name} />
-                  </div>
-                  <div className="card-text">
-                    <span className="coffee-name">{card.name}</span>
-
-                    <span className="price-text">
-                      <span style={{ color: "#F49B33" }}>$</span>
-                      <span>{card.price}</span>
-                      <span style={{ color: "lt.grey" }}> | </span>
-                      <span>{card.weight}g</span>
-                    </span>
-                    <span className="description-text">{card.description}</span>
-                  </div>
-                  <div className="button-container">
-                    <button className="tertiaryButton">Favorite</button>
-                    <button className="button">Add to Cart</button>
-                  </div>
+                <div key={i} className="stead-seller-card">
+                  <CoffeeCard card={card} />
                 </div>
               )
             )}

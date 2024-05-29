@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import "./CoffeeCard.css";
 import { useNavigate } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 
+// eslint-disable-next-line react/prop-types
 const CoffeeCard = ({ card }) => {
   const navigate = useNavigate();
   return (
@@ -24,8 +26,16 @@ const CoffeeCard = ({ card }) => {
         <span className="description-text">{card.description}</span>
       </div>
       <div className="button-container">
-        <CiHeart size={30} />
-        <button className="tertiaryButton">Favorite</button>
+        <button className="tertiaryButton">
+          <CiHeart
+            color="red"
+            size={30}
+            onClick={() => {
+              console.log("Added to favorite");
+              navigate("/favorite");
+            }}
+          />
+        </button>
         <button className="button">Add to Cart</button>
       </div>
     </div>

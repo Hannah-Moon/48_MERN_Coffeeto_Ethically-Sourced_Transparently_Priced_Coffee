@@ -1,16 +1,20 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Header.css";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { BsBasket3 } from "react-icons/bs";
 import { IoMenu } from "react-icons/io5";
 import OutsideClickHandler from "react-outside-click-handler";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { CoffeeContext } from "../../context-and-reducer/CoffeeContext";
 
 const Header = () => {
   const navigate = useNavigate();
 
   const [menuOpened, setMenuOpened] = useState(false);
+
+  const { coffees } = useContext(CoffeeContext);
+
   const getMenuStyles = (menuOpened) => {
     if (document.documentElement.clientWidth <= 800) {
       return { right: !menuOpened && "-100%" };
@@ -40,26 +44,45 @@ const Header = () => {
             className="flexCenter header-menu"
             style={getMenuStyles(menuOpened)}
           >
-            <a href="/shop">Shop</a>
-            <a href="/gift">Gift</a>
-            <a href="/tool">Tool</a>
-            <a href="/discover">Discover</a>
+            <Link to="/shop">
+              <a>Shop</a>
+            </Link>
+
+            <Link to="/gift">
+              <a>Gift</a>
+            </Link>
+
+            <Link to="/tool">
+              <a>Tool</a>
+            </Link>
+
+            <Link to="/discover">
+              <a>Discover</a>
+            </Link>
+
             <div className="search-bar">
               <input type="text" className="inputText" />
               <button className="tertiaryButton">
                 <FaMagnifyingGlass color="var(--orange)" />
               </button>
             </div>
+
             <button className="tertiaryButton">
               <CiHeart
                 color="var(--orange)"
                 size={22}
                 onClick={() => {
-                  console.log("Clicked");
+                  console.log(
+                    "Favorite button is selected.taking users to the favorite screen."
+                  );
                   navigate("/favorite");
                 }}
-              />
+              />{" "}
+              <span className="text-xs align-top bg-red-500 text-white rounded-full px-2 py-1 mx-1">
+                {coffees.length}
+              </span>
             </button>
+
             <button className="tertiaryButton">
               <BsBasket3
                 color="var(--orange)"
@@ -68,7 +91,7 @@ const Header = () => {
                   console.log("Clicked");
                   navigate("/cart");
                 }}
-              />
+              />{" "}
             </button>
           </div>
         </OutsideClickHandler>
