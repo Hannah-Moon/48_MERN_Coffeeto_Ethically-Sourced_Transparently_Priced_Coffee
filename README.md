@@ -64,6 +64,12 @@ I opted for transparency in coffee pricing as the guiding principle for my appro
 | ----------------------------------------------------- |
 | <img width="800" alt='Gantt' src="/assets/Gantt.png"> |
 
+## ⛁ Database
+
+| Snapshot                                                       |
+| -------------------------------------------------------------- |
+| <img width="800" alt='Atlas Database' src="/assets/atlas.gif"> |
+
 ## 🔎 Reflection
 
 | Key Takeaway        | Analysis                                                                                                                                                                                                                                                                   |
