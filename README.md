@@ -33,7 +33,7 @@ The cost of coffee has significantly increased, with people now spending an aver
 
 ## 🍪 Solution
 
-I opted for transparency in coffee pricing as the guiding principle for my approach. To achieve this, I integrated the Arabista Coffee price API from Bloomberg for Data Viz, supplemented by a fictitious coffee API for visual reinforcement. Additionally, I incorporated the Realtime Commodities API to offer a more comprehensive context. The links to all APIs utilized are provided below for reference.
+I opted for transparency in coffee pricing as the guiding principle for my approach. To achieve this, I integrated the third party's coffee price API for Data Viz, supplemented by a fictitious coffee API for visual reinforcement. The links to all APIs utilized are provided below for reference.
 
 ## 🎯 Features
 
@@ -95,3 +95,4 @@ I opted for transparency in coffee pricing as the guiding principle for my appro
 - Implement authentication feature to enhance security and user management.
 - Integrate an admin flow for streamlined data entry and management.
 - Keep working on enhancement.
+- Implement a calculator for each cup of coffee's price.

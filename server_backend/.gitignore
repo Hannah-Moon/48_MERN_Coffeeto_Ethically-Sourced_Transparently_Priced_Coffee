@@ -1,3 +1,4 @@
 node_modules
 .env
 Mongoose_File_Storage
+.server.js

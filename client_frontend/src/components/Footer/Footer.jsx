@@ -40,10 +40,10 @@ const Footer = () => {
             <span
               onClick={() => {
                 console.log("Clicked");
-                navigate("/discover");
+                navigate("/collaboration");
               }}
             >
-              Discover
+              Collaboration
             </span>
           </div>
         </div>

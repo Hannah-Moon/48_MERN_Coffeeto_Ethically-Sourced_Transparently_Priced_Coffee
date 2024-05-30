@@ -15,10 +15,18 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
+app.use("/coffeetoAPI", coffeeRoute);
+
 app.listen(PORT, () => {
   console.log(`Port is running on PORT No.${PORT}`);
 });
 
-app.use("/api/admin", adminRoute);
-app.use("/api/coffee", coffeeRoute);
-app.use("/api/user", userRoute);
+// Testing Prior APIs
+// app.use("/api/admin", adminRoute);
+// app.use("/api/coffee", coffeeRoute);
+// app.use("/api/user", userRoute);
+
+// Connecting to Clientside APIs
+app.use("/coffeetoAPI/admin", adminRoute);
+app.use("/coffeetoAPI/coffee", coffeeRoute);
+app.use("/coffeetoAPI/user", userRoute);
