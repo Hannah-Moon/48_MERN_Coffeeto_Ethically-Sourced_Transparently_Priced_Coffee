@@ -4,8 +4,7 @@
 }
 
 .products-container {
-  border: 5px solid blue;
-
+  /* border: 5px solid blue; */
   gap: 2rem;
   position: relative;
   overflow: hidden;
@@ -22,14 +21,14 @@
   gap: 2rem;
 }
 
-.load-more-button {
-  margin-top: 3rem;
+.load-more-container {
+  margin-top: 2.5rem;
   display: flex;
   justify-content: center;
 }
 
 .search-container {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   justify-content: flex-end;
   margin-top: 1rem;

@@ -30,8 +30,8 @@ const Shops = () => {
           </div>
 
           <div className="flexColStart products-head">
-            <span className="eyebrowText">Just In</span>
-            <span className="primaryText">Coffeeto's Catered Collection</span>
+            <span className="eyebrowText">Experience the Exceptional</span>
+            <span className="primaryText">Refined Selection</span>
           </div>
 
           <div className="products-grid">
@@ -41,8 +41,8 @@ const Shops = () => {
               </div>
             ))}
           </div>
-          <div className="load-more-button">
-            <button className="secondaryButton">Load More</button>
+          <div className="load-more-container">
+            <button className="load-more-button">Load More</button>
           </div>
         </div>
       </section>

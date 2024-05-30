@@ -52,7 +52,7 @@ const Header = () => {
 
             <Link to="/tool">Tool</Link>
 
-            <Link to="/discover">Discover</Link>
+            <Link to="/collaboration">Collaboration</Link>
 
             <div className="search-bar">
               <input type="text" className="inputText" />

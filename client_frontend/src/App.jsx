@@ -4,7 +4,7 @@ import Home from "./pages/Home.jsx";
 import Shop from "./pages/Shop.jsx";
 import Gift from "./pages/Gift.jsx";
 import Tool from "./pages/Tool.jsx";
-import Discover from "./pages/Discover.jsx";
+import Collaboration from "./pages/Collaboration.jsx";
 import Favorite from "./pages/Favorite.jsx";
 import Cart from "./pages/Cart.jsx";
 // import ASingleProduct from "./pages/ASingleProduct.jsx";
@@ -24,7 +24,7 @@ export default function App() {
             <Route path="/shop" element={<Shop />} />
             <Route path="/gift" element={<Gift />} />
             <Route path="/tool" element={<Tool />} />
-            <Route path="/discover" element={<Discover />} />
+            <Route path="/collaboration" element={<Collaboration />} />
             <Route path="/cart" element={<Cart />} />
             {/* <Route path="/shop/product" element={<ASingleProduct />} /> */}
           </Routes>

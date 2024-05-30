@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./SearchForm.css";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 export default function SearchForm(props) {
   // State to hold the data of our form
@@ -22,15 +23,17 @@ export default function SearchForm(props) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="coffee-finder">
+        <FaMagnifyingGlass color="var(--lightgrey)" size={22} />
         <input
-          className="search"
+          // className="search"
+          className="search-bar-shop"
           type="text"
           name="searchterm"
           onChange={handleChange}
           value={formData.searchterm}
         />
-        <input className="submitBtn" type="submit" value="search" />
+        <input className="submit-key-button" type="submit" value="Search" />
       </form>
     </div>
   );
