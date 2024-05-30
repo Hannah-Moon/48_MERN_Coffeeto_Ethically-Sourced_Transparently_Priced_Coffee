@@ -1,48 +1,52 @@
 import { useState, useEffect } from "react";
 import CoffeeCard from "../CoffeeCard/CoffeeCard.jsx";
 import SearchForm from "../SearchForm/SearchForm.jsx";
+import "./Shops.css";
 
 const Shops = () => {
-  const defaultCoffees = [
-    "Signature Blend",
-    "Golden Sunrise",
-    "Rainforest Rhapsody",
-    "Harvest Moon",
-  ];
-
-  // eslint-disable-next-line no-unused-vars
   const [coffees, setCoffees] = useState([]);
 
-  const getCoffees = async (coffeeNames) => {
-    const promises = coffeeNames.map(async (name) => {
-      try {
-        const response = await fetch(
-          "https://fake-coffee-api.vercel.app/api"
-        ).then((res) => res.json());
-        //   .then((data) => console.log(data));
-
-        const data = await response.json();
-
-        return data;
-      } catch (error) {
-        console.error(`Error fetching data for ${name}:`, error);
-        return null;
-      }
-    });
-
-    const coffeesData = await Promise.all(promises);
-    setCoffees(coffeesData.filter((coffee) => coffee !== null));
+  const getCoffees = async () => {
+    try {
+      const response = await fetch("https://fake-coffee-api.vercel.app/api");
+      const data = await response.json();
+      setCoffees(data);
+      console.log("Success fetching data!");
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   useEffect(() => {
-    getCoffees(defaultCoffees);
+    getCoffees();
   }, []);
 
   return (
-    <div>
-      <SearchForm moviesearch={getCoffees} />
-      <CoffeeCard />
-    </div>
+    <>
+      <section className="products-wrapper">
+        <div className="paddings innerWidth products-container">
+          <div className="search-container">
+            <SearchForm coffeesearch={getCoffees} />
+          </div>
+
+          <div className="flexColStart products-head">
+            <span className="eyebrowText">Just In</span>
+            <span className="primaryText">Coffeeto's Catered Collection</span>
+          </div>
+
+          <div className="products-grid">
+            {coffees.slice(0, 8).map((card, i) => (
+              <div key={i} className="just-in-card">
+                <CoffeeCard card={card} />
+              </div>
+            ))}
+          </div>
+          <div className="load-more-button">
+            <button className="secondaryButton">Load More</button>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

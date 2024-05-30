@@ -31,7 +31,7 @@ const Header = () => {
           className="CoffeetoLogo"
           width={100}
           onClick={() => {
-            console.log("Clicked");
+            console.log("Logo clicked. Taking users to home page.");
             // navigate("/HomePage");
             navigate("/");
           }}

@@ -1,9 +1,8 @@
-import "swiper/css";
 import data from "../../data/slider.json";
 import "./Products.css";
 import CoffeeCard from "../CoffeeCard/CoffeeCard";
 
-const PopularCoffees = () => {
+const Products = () => {
   return (
     <>
       {/* New Collection */}
@@ -60,4 +59,4 @@ const PopularCoffees = () => {
   );
 };
 
-export default PopularCoffees;
+export default Products;

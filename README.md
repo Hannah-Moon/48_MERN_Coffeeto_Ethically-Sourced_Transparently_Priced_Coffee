@@ -1,6 +1,7 @@
 # `Coffeeto`
 
-> : a Full Stack MERN Application With CRUD Ethically Sourced, Transparently Priced Coffee for a Better World ☕
+> - A Full Stack MERN Application With CRUD
+> - Ethically Sourced, Transparently Priced Coffee for a Better World ☕
 
 ## 🎬 Live Demo
 
