@@ -92,7 +92,7 @@ I opted for transparency in coffee pricing as the guiding principle for my appro
 
 - Enhance the Entity Relationship Diagram (ERD) for better clarity and completeness.
 - Ensure all pages are fully functional and operational.
-- Implement authentication feature to enhance security and user management.
+- Implement authentication features to enhance security and user management.
 - Integrate an admin flow for streamlined data entry and management.
 - Keep working on enhancement.
-- Implement a calculator for each cup of coffee's price.
+- Implement a calculator for the price of each cup of coffee.
