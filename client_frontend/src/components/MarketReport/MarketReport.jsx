@@ -13,9 +13,9 @@ function MarketReport() {
     script.async = true;
     script.innerHTML = JSON.stringify({
       autosize: true,
-      symbol: "NCDEX:COFFEE",
+      symbol: "VANTAGE:COFFEE",
       interval: "D",
-      timezone: "Etc/UTC",
+      timezone: "America/New_York",
       theme: "light",
       style: "2",
       locale: "en",
@@ -40,35 +40,39 @@ function MarketReport() {
   }, []);
 
   return (
-    <div className="marketreport-container">
-      <div className="market-title">
-        <span className="eyebrowText">Market Overview</span>
-        <h1 className="primaryText">Coffeeto's Live Market Insights</h1>
-        {/* <p className="secondaryText">
+    <section className="flexColStart market-wrapper">
+      <div className="padding innerWidth marketreport-container">
+        <div className="market-title">
+          <span className="eyebrowText">Market Overview</span>
+          <h1 className="primaryText">Live Market Insights</h1>
+          {/* <p className="secondaryText">
           Stay updated with the latest trends and real-time data on coffee
           market performance.
         </p> */}
-      </div>
-      <div
-        className="tradingview-widget-container"
-        ref={containerRef}
-        //   style={{ height: "60rem", width: "100%" }}
-      >
+        </div>
         <div
-          className="tradingview-widget-container__widget"
-          // style={{ height: "calc(100% - 32px)", width: "100%" }}
-        ></div>
-        <div className="tradingview-widget-copyright">
-          <a
-            href="https://www.tradingview.com/"
-            rel="noopener nofollow"
-            target="_blank"
-          >
-            <span className="blue-text">Track all markets on TradingView</span>
-          </a>
+          className="tradingview-widget-container"
+          ref={containerRef}
+          //   style={{ height: "60rem", width: "100%" }}
+        >
+          <div
+            className="tradingview-widget-container__widget"
+            // style={{ height: "calc(100% - 32px)", width: "100%" }}
+          ></div>
+          <div className="tradingview-widget-copyright">
+            <a
+              href="https://www.tradingview.com/"
+              rel="noopener nofollow"
+              target="_blank"
+            >
+              <span className="blue-text">
+                Track all markets on TradingView
+              </span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

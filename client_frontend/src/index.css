@@ -132,6 +132,7 @@
   border-radius: 4px;
   transition: all 300ms ease-in;
 }
+
 .button:hover {
   cursor: pointer;
   transform: scale(1.1);
@@ -146,6 +147,7 @@
   border-radius: 4px;
   transition: all 300ms ease-in;
 }
+
 .secondaryButton:hover {
   cursor: pointer;
   transform: scale(1.1);
@@ -159,6 +161,7 @@
   border-radius: 4px;
   transition: all 300ms ease-in;
 }
+
 .tertiaryButton:hover {
   cursor: pointer;
   transform: scale(1.1);
