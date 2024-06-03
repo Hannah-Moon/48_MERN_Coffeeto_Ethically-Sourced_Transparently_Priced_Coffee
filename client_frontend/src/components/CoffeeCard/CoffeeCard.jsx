@@ -1,26 +1,32 @@
 /* eslint-disable react/prop-types */
 import "./CoffeeCard.css";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { CoffeeContext } from "../../context-and-reducer/CoffeeContext.jsx";
-// import { useNavigate } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
+import { IoMdHeart } from "react-icons/io";
 
 // eslint-disable-next-line react/prop-types
 const CoffeeCard = ({ card }) => {
   const { addToFavorite } = useContext(CoffeeContext);
+  const [isFavorite, setIsFavorite] = useState(false); // State for managing heart icon fill
 
   const handleAdd = () => {
     addToFavorite(card);
+    // Change color on click
+    setIsFavorite(!isFavorite); // Toggle favorite state
+
+    //--------------------------- { remove from favorite experiment }
+    // const { removeFromFavorite } = useContext(CoffeeContext);
+
+    // const handleRemove = () => {
+    //   removeFromFavorite(card);
+
+    //--------------------------- { remove from favorite experiment }
   };
 
-  // const navigate = useNavigate();
   const loaded = () => {
     return (
-      <div
-        className="flexColStart coffee-card"
-        // onClick={() => navigate(`../favorite/${card.id}`)}
-        // onClick={() => navigate(`../favorite`)}
-      >
+      <div className="flexColStart coffee-card">
         <div>
           <img src={card.image_url} alt={card.name} />
         </div>
@@ -36,15 +42,12 @@ const CoffeeCard = ({ card }) => {
           <span className="description-text">{card.description}</span>
         </div>
         <div className="button-container">
-          <button className="tertiaryButton">
-            <CiHeart
-              color="red"
-              size={30}
-              onClick={() => {
-                console.log("Added to favorite");
-                handleAdd();
-              }}
-            />
+          <button className="tertiaryButton" onClick={handleAdd}>
+            {isFavorite ? (
+              <IoMdHeart color="red" size={30} />
+            ) : (
+              <CiHeart color="red" size={30} />
+            )}
           </button>
           <button className="button">Add to Cart</button>
         </div>
