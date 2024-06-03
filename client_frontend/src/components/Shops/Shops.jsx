@@ -6,11 +6,20 @@ import "./Shops.css";
 const Shops = () => {
   const [coffees, setCoffees] = useState([]);
 
-  const getCoffees = async () => {
+  const getCoffees = async (searchTerms = []) => {
     try {
       const response = await fetch("https://fake-coffee-api.vercel.app/api");
       const data = await response.json();
-      setCoffees(data);
+
+      if (searchTerms.length > 0) {
+        const filteredCoffees = data.filter((coffee) =>
+          coffee.name.toLowerCase().includes(searchTerms[0].toLowerCase())
+        );
+        setCoffees(filteredCoffees);
+      } else {
+        setCoffees(data);
+      }
+
       console.log("Success fetching data!");
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -26,7 +35,7 @@ const Shops = () => {
       <section className="products-wrapper">
         <div className="paddings innerWidth products-container">
           <div className="search-container">
-            <SearchForm coffeesearch={getCoffees} />
+            <SearchForm coffeeSearch={getCoffees} />
           </div>
 
           <div className="flexColStart products-head">
@@ -42,7 +51,9 @@ const Shops = () => {
             ))}
           </div>
           <div className="load-more-container">
-            <button className="load-more-button">Load More</button>
+            <button className="load-more-button" type="button">
+              Load More
+            </button>
           </div>
         </div>
       </section>
