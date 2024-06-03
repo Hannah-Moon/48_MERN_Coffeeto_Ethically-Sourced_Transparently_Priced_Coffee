@@ -5,6 +5,7 @@ import "./Shops.css";
 
 const Shops = () => {
   const [coffees, setCoffees] = useState([]);
+  const [displayCount, setDisplayCount] = useState(8); // Initial display count
 
   const getCoffees = async (searchTerms = []) => {
     try {
@@ -19,7 +20,6 @@ const Shops = () => {
       } else {
         setCoffees(data);
       }
-
       console.log("Success fetching data!");
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -29,6 +29,10 @@ const Shops = () => {
   useEffect(() => {
     getCoffees();
   }, []);
+
+  const loadMoreCoffees = () => {
+    setDisplayCount(displayCount + 4); // Increase the display count by 4 (or any desired number)
+  };
 
   return (
     <>
@@ -44,17 +48,23 @@ const Shops = () => {
           </div>
 
           <div className="products-grid">
-            {coffees.slice(0, 8).map((card, i) => (
+            {coffees.slice(0, displayCount).map((card, i) => (
               <div key={i} className="just-in-card">
                 <CoffeeCard card={card} />
               </div>
             ))}
           </div>
-          <div className="load-more-container">
-            <button className="load-more-button" type="button">
-              Load More
-            </button>
-          </div>
+          {displayCount < coffees.length && (
+            <div className="load-more-container">
+              <button
+                className="load-more-button"
+                type="button"
+                onClick={loadMoreCoffees}
+              >
+                Load More
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </>
