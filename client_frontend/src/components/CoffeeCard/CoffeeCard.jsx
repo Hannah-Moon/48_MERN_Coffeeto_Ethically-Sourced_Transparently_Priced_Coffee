@@ -1,27 +1,30 @@
 /* eslint-disable react/prop-types */
 import "./CoffeeCard.css";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { CoffeeContext } from "../../context-and-reducer/CoffeeContext.jsx";
 import { CiHeart } from "react-icons/ci";
 import { IoMdHeart } from "react-icons/io";
 
-// eslint-disable-next-line react/prop-types
 const CoffeeCard = ({ card }) => {
-  const { addToFavorite } = useContext(CoffeeContext);
-  const [isFavorite, setIsFavorite] = useState(false); // State for managing heart icon fill
+  const { addToFavorite, removeFromFavorite, coffees } =
+    useContext(CoffeeContext);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(() => {
+    // Check if the coffee is already in favorites
+    const favorite = coffees.some(
+      (favoriteCard) => favoriteCard.name === card.name
+    );
+    setIsFavorite(favorite);
+  }, [coffees, card.name]);
 
   const handleAdd = () => {
-    addToFavorite(card);
-    // Change color on click
-    setIsFavorite(!isFavorite); // Toggle favorite state
-
-    //--------------------------- { remove from favorite experiment }
-    // const { removeFromFavorite } = useContext(CoffeeContext);
-
-    // const handleRemove = () => {
-    //   removeFromFavorite(card);
-
-    //--------------------------- { remove from favorite experiment }
+    if (isFavorite) {
+      removeFromFavorite(card);
+    } else {
+      addToFavorite(card);
+    }
+    setIsFavorite(!isFavorite);
   };
 
   const loaded = () => {
@@ -32,7 +35,6 @@ const CoffeeCard = ({ card }) => {
         </div>
         <div className="card-text">
           <span className="coffee-name">{card.name}</span>
-
           <span className="price-text">
             <span className="tertiaryText">$</span>
             <span>{card.price}</span>
