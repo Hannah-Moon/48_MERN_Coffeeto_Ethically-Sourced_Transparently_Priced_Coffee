@@ -6,25 +6,47 @@ import { CiHeart } from "react-icons/ci";
 import { IoMdHeart } from "react-icons/io";
 
 const CoffeeCard = ({ card }) => {
-  const { addToFavorite, removeFromFavorite, coffees } =
-    useContext(CoffeeContext);
+  const {
+    addToFavorite,
+    removeFromFavorite,
+    addToCart,
+    removeFromCart,
+    favorites,
+    cart,
+  } = useContext(CoffeeContext);
+
   const [isFavorite, setIsFavorite] = useState(false);
+  const [isCart, setIsCart] = useState(false);
 
   useEffect(() => {
     // Check if the coffee is already in favorites
-    const favorite = coffees.some(
+    const favorite = favorites.some(
       (favoriteCard) => favoriteCard.name === card.name
     );
     setIsFavorite(favorite);
-  }, [coffees, card.name]);
 
-  const handleAdd = () => {
+    const inCart = cart.some((cartCard) => cartCard.name === card.name);
+    setIsCart(inCart);
+  }, [favorites, cart, card.name]);
+
+  // Add to favorites
+  const handleAddFavorite = () => {
     if (isFavorite) {
       removeFromFavorite(card);
     } else {
       addToFavorite(card);
     }
     setIsFavorite(!isFavorite);
+  };
+
+  // Add to Cart
+  const handleAddCart = () => {
+    if (isCart) {
+      removeFromCart(card);
+    } else {
+      addToCart(card);
+    }
+    setIsCart(!isCart);
   };
 
   const loaded = () => {
@@ -44,14 +66,17 @@ const CoffeeCard = ({ card }) => {
           <span className="description-text">{card.description}</span>
         </div>
         <div className="button-container">
-          <button className="tertiaryButton" onClick={handleAdd}>
+          {" "}
+          <button className="tertiaryButton" onClick={handleAddFavorite}>
             {isFavorite ? (
               <IoMdHeart color="red" size={30} />
             ) : (
               <CiHeart color="red" size={30} />
             )}
           </button>
-          <button className="button">Add to Cart</button>
+          <button className="button" onClick={handleAddCart}>
+            {isCart ? "Remove from Cart" : "Add to Cart"}
+          </button>
         </div>
       </div>
     );

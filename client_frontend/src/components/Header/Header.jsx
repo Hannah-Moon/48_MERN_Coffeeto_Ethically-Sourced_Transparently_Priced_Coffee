@@ -15,7 +15,7 @@ const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 
   // const { coffees } = useContext(CoffeeContext);
-  const { coffees } = useContext(CoffeeContext);
+  const { favorites, cart } = useContext(CoffeeContext);
 
   const getMenuStyles = (menuOpened) => {
     if (document.documentElement.clientWidth <= 800) {
@@ -76,7 +76,7 @@ const Header = () => {
                 {coffees.length}
               </span> */}
               <span className="text-xs align-top bg-red-500 text-white rounded-full px-2 py-1 mx-1">
-                {coffees.length}
+                {favorites.length}
               </span>
             </button>
 
@@ -85,10 +85,15 @@ const Header = () => {
                 color="var(--orange)"
                 size={20}
                 onClick={() => {
-                  console.log("Clicked");
+                  console.log(
+                    "Cart button is selected. Taking users to the Cart screen."
+                  );
                   navigate("/cart");
                 }}
               />{" "}
+              <span className="text-xs align-top bg-red-500 text-white rounded-full px-2 py-1 mx-1">
+                {cart.length}
+              </span>
             </button>
           </div>
         </OutsideClickHandler>

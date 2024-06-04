@@ -1,0 +1,76 @@
+.coffee-card {
+  width: 100%;
+  max-width: 30rem;
+  gap: 0.6rem;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cardgrey);
+}
+
+.coffee-card:hover {
+  scale: 1.025;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(22, 22, 22, 0.25) 120%
+  );
+  box-shadow: 0px 25px 25px -25px rgba(55, 55, 55, 0.21);
+}
+
+.coffee-card > div > img {
+  width: 100%;
+  height: 15rem;
+  max-height: 22rem;
+  object-fit: cover;
+}
+
+.card-text {
+  background: #ffffff;
+  height: 14rem;
+  gap: 0.6rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.coffee-name {
+  height: 5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.price-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.description-text {
+  font-size: 0.6rem;
+  color: var(--lightgrey);
+}
+
+.button-container {
+  /* border: 2px solid green; */
+  border-radius: 5px;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  .popularHead {
+    align-items: center;
+  }
+  .popular-btns {
+    position: initial;
+  }
+}

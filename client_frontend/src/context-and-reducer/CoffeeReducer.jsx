@@ -1,24 +1,42 @@
 export const initialState = {
-  coffees: [],
+  favorites: [],
+  cart: [],
 };
 
 const coffeeReducer = (state, action) => {
   switch (action.type) {
-    case "add":
+    case "add_favorite":
       console.log(
-        "State is being updated. Selected coffee is added to favorite.: ",
+        "Favorite state is being updated. Selected coffee is added to the favorites.: ",
         state
       );
       return {
         ...state,
-        coffees: action.payload,
+        favorites: action.payload,
       };
-    case "remove":
-      console.log("State is removed from favorite.: ", state);
+
+    case "remove_favorite":
+      console.log("Favorite state is removed from favorites.: ", state);
+      return {
+        ...state,
+        favorites: action.payload,
+      };
+
+    case "add_cart":
+      console.log(
+        "Cart state is being updated. Selected coffee is added to the cart.: ",
+        state
+      );
+      return {
+        ...state,
+        cart: action.payload,
+      };
+    case "remove_cart":
+      console.log("Cart state is removed from the cart.: ", state);
 
       return {
         ...state,
-        coffees: action.payload,
+        cart: action.payload,
       };
 
     default:

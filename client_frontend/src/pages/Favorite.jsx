@@ -8,7 +8,7 @@ import { CoffeeContext } from "../context-and-reducer/CoffeeContext.jsx";
 import FavoriteCoffeeCard from "../components/FavoriteCoffeeCard/FavoriteCoffeeCard.jsx";
 
 const Favorite = () => {
-  const { coffees } = useContext(CoffeeContext);
+  const { favorites } = useContext(CoffeeContext);
   return (
     <>
       <Header />
@@ -28,7 +28,7 @@ const Favorite = () => {
           </div>
 
           <div className="products-grid">
-            {coffees.map((card, i) => (
+            {favorites.map((card, i) => (
               <FavoriteCoffeeCard key={i} favoriteCard={card} />
             ))}
           </div>
