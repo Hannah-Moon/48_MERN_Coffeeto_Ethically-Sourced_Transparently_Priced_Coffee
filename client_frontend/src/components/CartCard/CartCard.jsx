@@ -1,29 +1,54 @@
 import "./CartCard.css";
-// import { useNavigate } from "react-router-dom";
+import { useState, useContext, useEffect } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
-import { useContext } from "react";
 import { CoffeeContext } from "../../context-and-reducer/CoffeeContext.jsx";
 
 const CartCard = ({ cartCard }) => {
-  const { removeFromCart } = useContext(CoffeeContext);
+  const { removeFromCart, addToCart, cart } = useContext(CoffeeContext);
+  const [isCart, setIsCart] = useState(false);
 
+  useEffect(() => {
+    // Ensure cartCard is defined before accessing its properties.
+    if (cartCard) {
+      // Check if the coffee is already in the cart.
+      const inCart = cart.some((item) => item.name === cartCard.name);
+      setIsCart(inCart);
+    }
+  }, [cart, cartCard]);
+
+  // Remove from cart
   const handleRemove = () => {
-    removeFromCart(cartCard);
+    if (cartCard) {
+      removeFromCart(cartCard);
+    }
   };
 
-  // const navigate = useNavigate();
+  // Add to Cart
+  const handleAddCart = () => {
+    if (cartCard) {
+      if (isCart) {
+        console.log(`${cartCard.name} is already in the cart!`);
+        alert(`${cartCard.name} is already in the cart!`);
+      } else {
+        addToCart(cartCard);
+        alert(`${cartCard.name} has been added to the cart!`);
+      }
+      setIsCart(!isCart);
+    }
+  };
+
+  // Return early if cartCard is not defined.
+  if (!cartCard) {
+    return null;
+  }
 
   return (
-    <div
-      className="flexColStart coffee-card"
-      // onClick={() => navigate(`../shop/${favoriteCard.id}`)}
-    >
+    <div className="flexColStart cart-card">
       <div>
         <img src={cartCard.image_url} alt={cartCard.name} />
       </div>
       <div className="card-text">
         <span className="coffee-name">{cartCard.name}</span>
-
         <span className="price-text">
           <span className="tertiaryText">$</span>
           <span>{cartCard.price}</span>
@@ -36,7 +61,9 @@ const CartCard = ({ cartCard }) => {
         <button className="tertiaryButton">
           <FaRegTrashAlt color="green" size={20} onClick={handleRemove} />
         </button>
-        <button className="button">Add to Cart</button>
+        <button className="button" onClick={handleAddCart}>
+          {isCart ? "Added to Cart" : "Add to Cart"}
+        </button>
       </div>
     </div>
   );

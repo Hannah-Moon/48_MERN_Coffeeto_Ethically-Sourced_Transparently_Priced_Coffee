@@ -33,7 +33,11 @@ const Favorite = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section>{" "}
+      :
+      <>
+        <img src="/No_Favorite.png" alt="No favorite" />
+      </>
       <Footer />
     </>
   );
