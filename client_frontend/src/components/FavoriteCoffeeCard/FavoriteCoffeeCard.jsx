@@ -1,5 +1,4 @@
 import "./FavoriteCoffeeCard.css";
-// import { useNavigate } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { CoffeeContext } from "../../context-and-reducer/CoffeeContext.jsx";
@@ -7,21 +6,6 @@ import { CoffeeContext } from "../../context-and-reducer/CoffeeContext.jsx";
 const FavoriteCoffeeCard = ({ favoriteCard }) => {
   const { removeFromFavorite, addToCart, cart } = useContext(CoffeeContext);
   const [isCart, setIsCart] = useState(false);
-
-  // --------------------- {Interacting with brower if user add the same item to the cart}
-
-  // const notifyAlreadyInCart = (notifyUsersAboutRedundancy) => {
-  //   let notification = prompt(notifyUsersAboutRedundancy);
-  //   if (notification !== null) {
-  //     notification = notification.trim().toLowerCase(); // Trim whitespace and convert to lowercase    if (answer === solution) {
-  //       if (notification.toLowerCase() === cart.toLowerCase()) {
-  //           alert({name} + 'is added to the cart!');
-  //           notifyAlreadyInCart(notifyUsersAboutRedundancy);
-  //       } else  {
-  //           alert("is already in the cart!");
-  //       }
-  //   }
-  // };
 
   useEffect(() => {
     // Check if the coffee is already in the cart.
@@ -42,23 +26,17 @@ const FavoriteCoffeeCard = ({ favoriteCard }) => {
     } else {
       addToCart(favoriteCard);
       alert(`${favoriteCard.name} has been added to the cart!`);
+      setIsCart(true); // Ensure the button text updates to "Added to Cart"
     }
-    setIsCart(!isCart);
   };
 
-  // const navigate = useNavigate();
-
   return (
-    <div
-      className="flexColStart coffee-card"
-      // onClick={() => navigate(`../shop/${favoriteCard.id}`)}
-    >
+    <div className="flexColStart coffee-card">
       <div>
         <img src={favoriteCard.image_url} alt={favoriteCard.name} />
       </div>
       <div className="card-text">
         <span className="coffee-name">{favoriteCard.name}</span>
-
         <span className="price-text">
           <span className="tertiaryText">$</span>
           <span>{favoriteCard.price}</span>
@@ -73,7 +51,7 @@ const FavoriteCoffeeCard = ({ favoriteCard }) => {
         </button>
         <button className="button" onClick={handleAddCart}>
           {isCart ? "Added to Cart" : "Add to Cart"}
-        </button>{" "}
+        </button>
       </div>
     </div>
   );

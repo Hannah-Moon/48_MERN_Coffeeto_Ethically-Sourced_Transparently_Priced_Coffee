@@ -10,7 +10,7 @@ const CoffeeCard = ({ card }) => {
     addToFavorite,
     removeFromFavorite,
     addToCart,
-    removeFromCart,
+    // removeFromCart,
     favorites,
     cart,
   } = useContext(CoffeeContext);
@@ -40,13 +40,24 @@ const CoffeeCard = ({ card }) => {
   };
 
   // Add to Cart
+  // const handleAddCart = () => {
+  //   if (isCart) {
+  //     removeFromCart(card);
+  //   } else {
+  //     addToCart(card);
+  //   }
+  //   setIsCart(!isCart);
+  // };
+
   const handleAddCart = () => {
     if (isCart) {
-      removeFromCart(card);
+      console.log(`${card.name} is already in the cart!`);
+      alert(`${card.name} is already in the cart!`);
     } else {
       addToCart(card);
+      alert(`${card.name} has been added to the cart!`);
+      setIsCart(true); // Ensure the button text updates to "Added to Cart"
     }
-    setIsCart(!isCart);
   };
 
   const loaded = () => {
@@ -75,7 +86,7 @@ const CoffeeCard = ({ card }) => {
             )}
           </button>
           <button className="button" onClick={handleAddCart}>
-            {isCart ? "Remove from Cart" : "Add to Cart"}
+            {isCart ? "Added to Cart" : "Add to Cart"}
           </button>
         </div>
       </div>
