@@ -2,7 +2,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Shop from "./pages/Shop.jsx";
-import SingleProductDetail from "./pages/SingleProductDetail/SingleProductDetail.jsx";
+// import SingleProductDetail from "./pages/SingleProductDetail/SingleProductDetail.jsx";
 import Gift from "./pages/Gift.jsx";
 import Tool from "./pages/Tool.jsx";
 import Collaboration from "./pages/Collaboration.jsx";
@@ -26,8 +26,9 @@ export default function App() {
               <Route path="/" element={<Home />} exact />
               <Route path="/home" element={<Home />} />
               <Route path="/favorite" element={<Favorite />} />
+              {/* <Route path="/shop" element={<Shop />} /> */}
+              {/* <Route path="/:id" element={<SingleProductDetail />} /> */}
               <Route path="/shop">
-                <Route index element={<Shop />} />
                 <Route path=":coffeeID" element={<SingleProductDetail />} />
               </Route>
 

@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { getAllCoffees } from "../coffeetoAPI/coffeetoAPI.js";
+import { getAllCoffees } from "../coffeetoAPI/coffeetoAPI";
 
 const useCoffees = () => {
   const { data, isError, isLoading, refetchy } = useQuery(

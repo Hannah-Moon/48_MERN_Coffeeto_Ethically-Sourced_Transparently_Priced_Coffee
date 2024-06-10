@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const coffeetoAPI = axios.create({
-  baseURL: "http://localhost:3000/coffeetoAPI",
+  baseURL: "http://localhost:3000",
 });
 
 export const getAllCoffees = async () => {
