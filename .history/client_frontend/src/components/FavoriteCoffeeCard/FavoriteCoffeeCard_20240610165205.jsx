@@ -33,18 +33,14 @@ const FavoriteCoffeeCard = ({ favoriteCard }) => {
   };
 
   return (
-    <div className="flexColStart coffee-card">
+    <div
+      className="flexColStart coffee-card"
+      onClick={() => navigate(`../shop/${favoriteCard.id}`)}
+    >
       <div>
-        <img
-          src={favoriteCard.image_url}
-          alt={favoriteCard.name}
-          onClick={() => navigate(`../shop/${favoriteCard.id}`)}
-        />
+        <img src={favoriteCard.image_url} alt={favoriteCard.name} />
       </div>
-      <div
-        className="card-text"
-        onClick={() => navigate(`../shop/${favoriteCard.id}`)}
-      >
+      <div className="card-text">
         <span className="coffee-name">{favoriteCard.name}</span>
         <span className="price-text">
           <span className="tertiaryText">$</span>

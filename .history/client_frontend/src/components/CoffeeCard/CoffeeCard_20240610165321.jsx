@@ -72,10 +72,7 @@ const CoffeeCard = ({ card }) => {
             onClick={() => navigate(`../shop/${card.id}`)}
           />
         </div>
-        <div
-          className="card-text"
-          onClick={() => navigate(`../shop/${card.id}`)}
-        >
+        <div className="card-text">
           <span className="coffee-name">{card.name}</span>
           <span className="price-text">
             <span className="tertiaryText">$</span>

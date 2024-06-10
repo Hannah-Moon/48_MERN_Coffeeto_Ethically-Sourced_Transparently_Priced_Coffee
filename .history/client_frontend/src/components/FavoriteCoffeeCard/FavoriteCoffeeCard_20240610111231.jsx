@@ -2,10 +2,8 @@ import "./FavoriteCoffeeCard.css";
 import { useState, useContext, useEffect } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { CoffeeContext } from "../../context-and-reducer/CoffeeContext.jsx";
-import { useNavigate } from "react-router-dom";
 
 const FavoriteCoffeeCard = ({ favoriteCard }) => {
-  const navigate = useNavigate();
   const { removeFromFavorite, addToCart, cart } = useContext(CoffeeContext);
   const [isCart, setIsCart] = useState(false);
 
@@ -35,16 +33,9 @@ const FavoriteCoffeeCard = ({ favoriteCard }) => {
   return (
     <div className="flexColStart coffee-card">
       <div>
-        <img
-          src={favoriteCard.image_url}
-          alt={favoriteCard.name}
-          onClick={() => navigate(`../shop/${favoriteCard.id}`)}
-        />
+        <img src={favoriteCard.image_url} alt={favoriteCard.name} />
       </div>
-      <div
-        className="card-text"
-        onClick={() => navigate(`../shop/${favoriteCard.id}`)}
-      >
+      <div className="card-text">
         <span className="coffee-name">{favoriteCard.name}</span>
         <span className="price-text">
           <span className="tertiaryText">$</span>
