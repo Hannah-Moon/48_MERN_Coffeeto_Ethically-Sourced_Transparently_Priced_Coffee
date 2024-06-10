@@ -4,10 +4,8 @@ import { useState, useContext, useEffect } from "react";
 import { CoffeeContext } from "../../context-and-reducer/CoffeeContext.jsx";
 import { CiHeart } from "react-icons/ci";
 import { IoMdHeart } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
 
 const CoffeeCard = ({ card }) => {
-  const navigate = useNavigate();
   const {
     addToFavorite,
     removeFromFavorite,
@@ -64,10 +62,7 @@ const CoffeeCard = ({ card }) => {
 
   const loaded = () => {
     return (
-      <div
-        className="flexColStart coffee-card"
-        onClick={() => navigate(`../shop/${card.id}`)}
-      >
+      <div className="flexColStart coffee-card">
         <div>
           <img src={card.image_url} alt={card.name} />
         </div>
