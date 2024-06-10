@@ -21,7 +21,7 @@ export const getAllCoffees = async () => {
 
 export const getCoffee = async (id) => {
   try {
-    const response = await coffeetoAPI.get(`/${id}`, {
+    const response = await coffeetoAPI.get(`/allcoffees/${id}`, {
       timeout: 5 * 1000,
     });
     if (response.status === 400 || response.status === 500) {

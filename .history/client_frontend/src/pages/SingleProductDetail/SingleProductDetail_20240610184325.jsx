@@ -10,34 +10,34 @@ import { CiHeart } from "react-icons/ci";
 import { IoMdHeart } from "react-icons/io";
 import "./SingleProductDetail.css";
 
-const SingleProductDetail = () => {
+const SingleProductDetail = ({ productDetail }) => {
   const { pathname } = useLocation();
   const id = pathname.split("/").slice(-1)[0];
-  const { addToFavorite, removeFromFavorite, addToCart, favorites, cart } =
-    useContext(CoffeeContext);
+  const {
+    addToFavorite,
+    removeFromFavorite,
+    addToCart,
+    // removeFromCart,
+    favorites,
+    cart,
+  } = useContext(CoffeeContext);
   const [isFavorite, setIsFavorite] = useState(false);
   const [isCart, setIsCart] = useState(false);
 
-  const {
-    data: productDetail,
-    isLoading,
-    isError,
-  } = useQuery(["selectedCoffee", id], () => getCoffee(id));
-
   useEffect(() => {
-    if (productDetail) {
-      const favorite = favorites.some(
-        (favoriteCard) => favoriteCard.name === productDetail.name
-      );
-      setIsFavorite(favorite);
+    // Check if the coffee is already in favorites
+    const favorite = favorites.some(
+      (favoriteCard) => favoriteCard.name === productDetail.name
+    );
+    setIsFavorite(favorite);
 
-      const inCart = cart.some(
-        (cartCard) => cartCard.name === productDetail.name
-      );
-      setIsCart(inCart);
-    }
-  }, [favorites, cart, productDetail]);
+    const inCart = cart.some(
+      (cartCard) => cartCard.name === productDetail.name
+    );
+    setIsCart(inCart);
+  }, [favorites, cart, productDetail.name]);
 
+  // Add to favorites
   const handleAddFavorite = () => {
     if (isFavorite) {
       removeFromFavorite(productDetail);
@@ -54,33 +54,35 @@ const SingleProductDetail = () => {
     } else {
       addToCart(productDetail);
       alert(`${productDetail.name} has been added to the cart!`);
-      setIsCart(true);
+      setIsCart(true); // Ensure the button text updates to "Added to Cart"
     }
   };
 
+  const { data, isLoading, isError } = useQuery(["selectedCoffee", id], () =>
+    getCoffee(id)
+  );
+  //  ---------------------- [ Test data ]
+  console.log(id);
+  console.log(data);
+
   if (isError) {
     return (
-      <>
-        <Header />
-        <div className="wrapper">
-          <span>
-            Sorry. We encountered an error while fetching data from our server!
-          </span>
-        </div>
-        <Footer />
-      </>
+      <div className="wrapper">
+        <span>
+          Sorry. We encountered error while fetching data from our server!
+        </span>
+      </div>
     );
   }
-
   if (isLoading) {
     return (
       <>
         <Header />
         <div className="wrapper flexCenter" style={{ height: "60vh" }}>
           <ClipLoader
-            height={100}
-            width={100}
-            color="#352208"
+            height="100"
+            width="100"
+            color="352208"
             aria-label="clip-loader"
           />
         </div>
@@ -91,10 +93,10 @@ const SingleProductDetail = () => {
 
   return (
     <>
-      <Header />
       <div className="wrapper">
         <div className="flexColStart paddings innerWidth singleproductdetail-container">
           <div className="button-container">
+            {" "}
             <button className="tertiaryButton" onClick={handleAddFavorite}>
               {isFavorite ? (
                 <IoMdHeart color="red" size={30} />
@@ -106,10 +108,8 @@ const SingleProductDetail = () => {
               {isCart ? "Added to Cart" : "Add to Cart"}
             </button>
           </div>
-          {/* Add more product detail rendering here as needed */}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

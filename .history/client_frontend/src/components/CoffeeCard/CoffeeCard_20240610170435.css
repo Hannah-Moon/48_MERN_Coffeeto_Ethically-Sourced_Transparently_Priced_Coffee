@@ -24,8 +24,8 @@
 }
 
 .cart-card > div > img:hover {
-  cursor: pointer;
-  transform: scale(1.5);
+  /* cursor: pointer; */
+  transform: scale(1.1);
 }
 
 .cart-text {

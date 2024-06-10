@@ -23,11 +23,6 @@
   object-fit: cover;
 }
 
-.cart-card > div > img:hover {
-  cursor: pointer;
-  transform: scale(1.5);
-}
-
 .cart-text {
   background: #ffffff;
   height: 14rem;
