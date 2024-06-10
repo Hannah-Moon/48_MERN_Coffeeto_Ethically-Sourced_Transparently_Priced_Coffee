@@ -1,10 +1,6 @@
 import useCoffees from "../../hooks/useCoffees.jsx";
 import "./NewlyAddedCoffees.css";
 import { ClipLoader } from "react-spinners";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { sliderSettings } from "../PopularCoffees/swiperLogic.js";
-import "swiper/css";
-import CoffeeCard from "../CoffeeCard/CoffeeCard.jsx";
 
 const NewlyAddedCoffees = () => {
   const { data, isError, isLoading } = useCoffees();
@@ -31,20 +27,10 @@ const NewlyAddedCoffees = () => {
     );
   }
   return (
-    <>
-      <div className="flexColStart products-head">
-        <span className="eyebrowText">Newly Added Coffee</span>
-        <span className="primaryText">Try New Flavor</span>
-      </div>
-
-      <Swiper {...sliderSettings}>
-        {data.map((card, i) => (
-          <SwiperSlide key={i}>
-            <CoffeeCard card={card} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </>
+    <div className="flexColStart products-head">
+      <span className="eyebrowText">Newly Added Coffee</span>
+      <span className="primaryText">Try New Flavor</span>
+    </div>
   );
 };
 

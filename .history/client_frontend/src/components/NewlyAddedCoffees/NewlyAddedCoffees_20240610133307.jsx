@@ -4,7 +4,6 @@ import { ClipLoader } from "react-spinners";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { sliderSettings } from "../PopularCoffees/swiperLogic.js";
 import "swiper/css";
-import CoffeeCard from "../CoffeeCard/CoffeeCard.jsx";
 
 const NewlyAddedCoffees = () => {
   const { data, isError, isLoading } = useCoffees();
