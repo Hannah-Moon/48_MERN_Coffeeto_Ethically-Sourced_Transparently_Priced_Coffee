@@ -9,8 +9,7 @@ import Favorite from "./pages/Favorite.jsx";
 import Cart from "./pages/Cart.jsx";
 // import ASingleProduct from "./pages/ASingleProduct.jsx";
 import { CoffeeProvider } from "./context-and-reducer/CoffeeContext.jsx";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
+import { QueryClient } from "react-query";
 
 import "./App.css";
 
@@ -35,7 +34,6 @@ export default function App() {
           </div>
         </CoffeeProvider>
       </BrowserRouter>
-      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }

@@ -10,7 +10,7 @@ import Cart from "./pages/Cart.jsx";
 // import ASingleProduct from "./pages/ASingleProduct.jsx";
 import { CoffeeProvider } from "./context-and-reducer/CoffeeContext.jsx";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
+// import { ReactQueryDevTools } from "react-query/devtools";
 
 import "./App.css";
 
@@ -35,7 +35,7 @@ export default function App() {
           </div>
         </CoffeeProvider>
       </BrowserRouter>
-      <ReactQueryDevtools initialIsOpen={false} />
+      {/* <ReactQueryDevTools initialIsOpen={false} /> */}
     </QueryClientProvider>
   );
 }

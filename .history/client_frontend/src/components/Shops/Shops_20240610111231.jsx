@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import CoffeeCard from "../CoffeeCard/CoffeeCard.jsx";
 import SearchForm from "../SearchForm/SearchForm.jsx";
-import NewlyAddedCoffees from "../NewlyAddedCoffees/NewlyAddedCoffees.jsx";
 import "./Shops.css";
 
 const Shops = () => {
@@ -42,7 +41,7 @@ const Shops = () => {
           <div className="search-container">
             <SearchForm coffeeSearch={getCoffees} />
           </div>
-          <NewlyAddedCoffees />
+
           <div className="flexColStart products-head">
             <span className="eyebrowText">Experience the Exceptional</span>
             <span className="primaryText">Refined Selection</span>
